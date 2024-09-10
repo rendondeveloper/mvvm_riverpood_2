@@ -1,0 +1,1 @@
+export 'model/{{feature_name.snakeCase()}}_state.dart';
