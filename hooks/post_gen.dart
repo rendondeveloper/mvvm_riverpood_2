@@ -2,10 +2,14 @@ import 'dart:io';
 
 import 'package:mason/mason.dart';
 
-void run(HookContext context) {
+void run(HookContext context) async {
+  context.logger.info('EXECUTE.');
   final namePascalCase = context.vars['feature_name'].toString().pascalCase;
+  context.logger.info('EXECUTE - GET VARIABLE.');
   final filePath = 'lib/core/navigation/constants/route_paths.dart';
+  context.logger.info('EXECUTE - SET PATH.');
   final file = File(filePath);
+  context.logger.info('EXECUTE - CREATE PATH.');
 
   if (file.existsSync()) {
     final content = file.readAsStringSync();
