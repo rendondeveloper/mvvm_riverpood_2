@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:mason/mason.dart';
 
-void run(HookContext context) async {
+void run(HookContext context) {
   context.logger.info('EXECUTE.');
   final namePascalCase = context.vars['feature_name'].toString().pascalCase;
   context.logger.info('EXECUTE - GET VARIABLE.');
